@@ -3,15 +3,42 @@
 @tailwind utilities;
 
 :root {
-
+  --background: white;
+  --foreground: #111111;
+  --logo: 0%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-
-  }
+[data-theme="light"] {
+  --background: white;
+  --nav-background: rgba(249, 249, 249, 0.87);
+  --foreground: #111111;
+  --logo: 0%;
 }
 
-body {
-
+[data-theme="dark"] {
+  --background: #111111;
+  --nav-background: rgba(15, 15, 15, 0.87);
+  --foreground: white;
+  --logo: 100%;
 }
+
+nav {
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* LIGHT
+background: rgba(255, 255, 255, 0.59);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5.8px);
+-webkit-backdrop-filter: blur(5.8px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+*/
+
+/* DARK
+background: rgba(0, 0, 0, 0.59);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5.8px);
+-webkit-backdrop-filter: blur(5.8px);
+border: 1px solid rgba(0, 0, 0, 0.3);
+*/
