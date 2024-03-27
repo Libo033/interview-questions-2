@@ -8,8 +8,11 @@ const NavigationBar = () => {
   const { theme, setTheme } = useTheme();
 
   useEffect(() => {
-    if (window) {
-      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    if (window && localStorage) {
+      let savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        setTheme(savedTheme);
+      } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
         setTheme("dark");
       }
     }
@@ -28,12 +31,13 @@ const NavigationBar = () => {
       </div>
       <div className="w-fit h-full flex justify-between items-center lg:mr-10">
         <div className="flex justify-center items-center cursor-pointer">
-          {theme === "dark" ? (
+          {theme === "dark" && (
             <LightMode
               onClick={() => setTheme("light")}
               sx={{ fontSize: "28px", color: "var(--foreground)" }}
             />
-          ) : (
+          )}
+          {theme === "light" && (
             <DarkMode
               onClick={() => setTheme("dark")}
               sx={{ fontSize: "28px", color: "var(--foreground)" }}
