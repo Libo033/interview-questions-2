@@ -1,12 +1,6 @@
 "use client";
-import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import SwiperHome from "@/components/various/SwiperHome";
 import { useEffect, useState } from "react";
-
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 
 export default function Home() {
   const [size, setSize] = useState(150);
@@ -26,43 +20,7 @@ export default function Home() {
           Bienvenido a <b className="title">Inter Q:</b> Tu Recurso Definitivo
           para Preguntas de Entrevista en IT.
         </h1>
-        <div className="h-60 my-auto flex justify-center items-center md:w-2/6 md:h-fit lg:w-3/6">
-          <Swiper
-            modules={[Autoplay]}
-            slidesPerView={1}
-            loop={true}
-            autoplay={{ disableOnInteraction: false }}
-            centeredSlides={true}
-          >
-            <SwiperSlide>
-              <Image
-                className="m-auto"
-                src={"/img/javascript.svg"}
-                alt="javascript"
-                width={size}
-                height={size}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Image
-                className="m-auto"
-                src={"/img/react.svg"}
-                alt="react"
-                width={size}
-                height={size}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Image
-                className="m-auto"
-                src={"/img/typescript.svg"}
-                alt="typescript"
-                width={size}
-                height={size}
-              />
-            </SwiperSlide>
-          </Swiper>
-        </div>
+        <SwiperHome size={size} />
       </div>
       <h2 className="px-4 text-pretty pb-8 sm:px-16 sm:pt-12 md:text-xl lg:px-22 lg:pt-0">
         ¿Estás listo para destacarte en tu próxima entrevista de trabajo en el
