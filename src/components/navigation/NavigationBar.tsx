@@ -23,7 +23,7 @@ const NavigationBar = () => {
   }, []);
 
   return (
-    <nav className="w-full h-28 fixed bg-[--nav-background] flex justify-between">
+    <nav className="max-w-screen-2xl m-auto w-full h-28 fixed bg-[--nav-background] flex justify-between">
       <Link
         href={"/"}
         className="w-2/6 h-full flex justify-center items-center md:w-1/6"

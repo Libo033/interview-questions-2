@@ -3,6 +3,7 @@ import { Titillium_Web } from "next/font/google";
 import "./globals.css";
 import NavigationBar from "@/components/navigation/NavigationBar";
 import { ThemeProvider } from "next-themes";
+import Footer from "@/components/various/Footer";
 
 const titi = Titillium_Web({
   subsets: ["latin"],
@@ -26,6 +27,7 @@ export default function RootLayout({
           <div className="max-w-screen-2xl m-auto">
             <NavigationBar />
             {children}
+            <Footer />
           </div>
         </ThemeProvider>
       </body>

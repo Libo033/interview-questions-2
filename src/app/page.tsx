@@ -64,7 +64,7 @@ export default function Home() {
           </Swiper>
         </div>
       </div>
-      <h2 className="px-4 text-pretty pb-16 sm:px-16 sm:pt-12 md:text-xl lg:px-22 lg:pt-0">
+      <h2 className="px-4 text-pretty pb-8 sm:px-16 sm:pt-12 md:text-xl lg:px-22 lg:pt-0">
         ¿Estás listo para destacarte en tu próxima entrevista de trabajo en el
         área de Tecnología de la Información? ¡Has llegado al lugar adecuado! En
         <b className="title font-extrabold"> Inter Q</b>, te proporcionamos las
